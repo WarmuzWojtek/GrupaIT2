@@ -1,0 +1,41 @@
+.navbar > .container-fluid.header {
+  justify-content: center;
+  background: map-get($map: $colors, $key: "secondary");
+  height: 160px;
+  @media (min-width: 991px) {
+    background: transparent;
+  }
+}
+
+.header {
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom: 2px solid map-get($map: $colors, $key: "white");
+
+    @media (min-width: 576px) {
+      margin: 0 map-get($map: $spacings, $key: "m");
+    }
+    @media (min-width: 991px) {
+      width: 50%;
+      border-bottom: 7px solid map-get($map: $colors, $key: "primary");
+    }
+  }
+  &__imgContainer {
+    width: 25%;
+    margin-right: map-get($map: $spacings, $key: "m");
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  & h1 {
+    font-family: $title-font;
+    color: map-get($map: $colors, $key: "white");
+    @media (min-width: 991px) {
+      color: map-get($map: $colors, $key: "primary");
+    }
+  }
+}

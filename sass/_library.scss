@@ -1,0 +1,84 @@
+.library {
+  padding: map-get($map: $spacings, $key: "s")
+    map-get($map: $spacings, $key: "xxxs") map-get($map: $spacings, $key: "l")
+    map-get($map: $spacings, $key: "xxxs");
+  @media (min-width: 768px) {
+    padding: map-get($map: $spacings, $key: "s")
+      map-get($map: $spacings, $key: "s") map-get($map: $spacings, $key: "l")
+      map-get($map: $spacings, $key: "s");
+  }
+
+  &__formContainer {
+    background-color: map-get($map: $colors, $key: "primary");
+    padding: map-get($map: $spacings, $key: "xs");
+    border-radius: 12px;
+    margin-bottom: map-get($map: $spacings, $key: "m");
+    box-shadow: 5px 5px 5px 3px map-get($map: $colors, $key: "primary");
+    @media (min-width: 768px) {
+      box-shadow: 5px 5px 15px 3px map-get($map: $colors, $key: "primary");
+    }
+    & p {
+      color: map-get($map: $colors, $key: "white");
+      font-size: map-get($map: $font-size, $key: "s");
+    }
+  }
+  &__shelves {
+    background-color: map-get($map: $colors, $key: "white");
+    padding: map-get($map: $spacings, $key: "xs");
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px 3px map-get($map: $colors, $key: "primary");
+    @media (min-width: 768px) {
+      box-shadow: 5px 5px 15px 3px map-get($map: $colors, $key: "primary");
+    }
+  }
+  &__btn {
+    background: map-get($map: $colors, $key: "secondary");
+    border: none;
+    &:hover {
+      background: darken(map-get($map: $colors, $key: "secondary"), 10%);
+    }
+  }
+  &__shelvesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 5px solid map-get($map: $colors, $key: "primary");
+    margin-bottom: map-get($map: $spacings, $key: "m");
+  }
+  &__imgContainer {
+    width: 40%;
+    margin-right: map-get($map: $spacings, $key: "xxs");
+    @media (min-width: 576px) {
+      margin-right: map-get($map: $spacings, $key: "xs");
+    }
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__titleContainer {
+    width: 60%;
+    & p {
+      font-size: map-get($map: $font-size, $key: "m");
+      color: map-get($map: $colors, $key: "primary");
+      @media (min-width: 576px) {
+        font-size: map-get($map: $font-size, $key: "xl");
+      }
+    }
+  }
+}
+
+form * {
+  margin-bottom: $base-size;
+}
+
+.form-label {
+  color: map-get($map: $colors, $key: "white");
+}
+
+.borderT {
+  border-top: 2px solid map-get($map: $colors, $key: "primary");
+  border-bottom: 2px solid map-get($map: $colors, $key: "primary");
+  padding-top: map-get($map: $spacings, $key: "m");
+  padding-bottom: map-get($map: $spacings, $key: "m");
+}
