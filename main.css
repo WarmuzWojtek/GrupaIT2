@@ -84,9 +84,11 @@
 .library__btn {
   background: #cc2d60;
   border: none;
+  color: #ffffff;
 }
 .library__btn:hover {
   background: #a2244c;
+  color: #ffffff;
 }
 .library__shelvesContainer {
   display: flex;

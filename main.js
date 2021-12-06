@@ -57,6 +57,7 @@ function addBook(e) {
     categoryInput.value = "Wybierz kategorię";
     localStorage.setItem("myBooks", JSON.stringify(books));
     printBooks(books);
+    deleteBook();
   }
 }
 
@@ -71,3 +72,17 @@ function formValidation() {
     return false;
   } else return true;
 }
+
+function deleteBook() {
+  const currentRows = document.querySelectorAll("tbody>tr");
+  currentRows.forEach((row, index) => {
+    row.addEventListener("click", () => {
+      books.splice(index, 1);
+      localStorage.setItem("myBooks", JSON.stringify(books));
+      printBooks(books);
+      deleteBook();
+    });
+  });
+}
+
+deleteBook();
