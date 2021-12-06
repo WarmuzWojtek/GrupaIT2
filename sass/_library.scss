@@ -34,8 +34,10 @@
   &__btn {
     background: map-get($map: $colors, $key: "secondary");
     border: none;
+    color: map-get($map: $colors, $key: "white");
     &:hover {
       background: darken(map-get($map: $colors, $key: "secondary"), 10%);
+      color: map-get($map: $colors, $key: "white");
     }
   }
   &__shelvesContainer {
