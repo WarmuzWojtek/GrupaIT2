@@ -1,4 +1,4 @@
-# GrupaIT2 zadanie II - Formularze
+# Grupa.IT zadanie II - Formularze
 
 Zadanie polegało na napisaniu własnej biblioteki książek z wykorzystaniem HTML, CSS oraz JavaScript,
 w której znajdzie się formularz przyjmujący następujące pola:
